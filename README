@@ -1,0 +1,22 @@
+TEMA 1 - STRUCTURI DE DATE -
+
+1. TASK1 - Amestecaturi
+
+Inverse - functia care imverseaza pachetul de carti iterativ. Folosind 3 pointeri prev, cur, pachet(care e next) Iteram prin lista initial si schimbam directia pointerului curent sa arate la nodul precedent. Prev retine pozitia precedenta vectorului current, iar pachet o retine pe cea viitoare la are nu mai avem acces din nodul current dupa schimbarea directiei
+
+Npiles - functie ce amesteca pachetul impartindu-l in pachete mai mici si rearanjandu-le. Pentru aceasta, parcurgem pachetul intial pt a obtine pozitia inceputului unui pachet mai mic cu un indice primit ca input. Pentru fiecare pachet gasit in functie de vectorul de indici adaugam la sfarsititul unui nou pachet, sub forma unei liste, cartile care alcatuiesc pachetul mai mic si care sunt in nr de NR TOTAL de CARTI(52) / NR DE PACHETE. 
+
+Intercalare - functie ce amesteca pachetul intercaland cartile din prima jumatate cu cea din jumatatea a doua. Astfel, retin un pointer la jumatatea pachetului si inserez alternativ din cele doua pozitii(prima jum si a doua jum) carti intr-un pachet nou format. In final dupa ce eliberez memoria pachetului initial, retunrez pachetul nou alcatuit format prin amestecare
+
+Mongean - functie ce amesteca pachetul prin alternarea cartilor fata spate in mod consecutiv. Astfel in cadrul unei iteratii facem 2 miscari, mutam cartea de pe pozitie impara in spate si cea de pe pozitie para in fata si tot asa prin functiile InsertInceput, InsertSfarsit( care insereaza la inceputl, respectiv la sfarsitul unei noi liste create cartile din pachetul initial). La sfarsit eliberam memoria pachetului initial si returnam lista nou creata.
+
+Razboi -  Prima etapa in joc este pregatirea pachetelor initiale de carti ale celor doi jucatori prin parcurgerea pachetului initial si inserarea primei jum in pachetul primului jucator si celei de-a doua jumatati in pachetul celui de-al doilea jucator. Dupa care incepe jocul si la fiecare iteratie se verifica care carte de la inceputul listei de carti a celor doi jucator e mai mare. In functie de aceasta decizie se muta ambele carti la sfarsitul pachetului jucatorului castigator respectivei maini prin functia insertSfarsit si dispar de la inceputul listei prin functia Delete. In cazul de razboi, aflam castigatorul parcurgand listele de carti si comparand valorile de pe pozitia corespunzatoare. Apoi, se retin mini pachetele de carti de razboi in 2 liste care sunt atasate apoi jucatorului castigator in ordinea potrivita. La sfarsit, dupa cele 100 de iteratii, daca amandoi mai au carti, se alege castigatorul pe baza compararii unor vectori de frecventa corespunzatori pachetelor ramase ale celor 2 jucatori.
+
+RollingStone - Prima etapa in joc este pregatirea pachetelor initiale de carti ale celor 4 jucatori prin parcurgerea pachetului initial si inserarea in cate o lista corespunzatoare fiecarui jucator grupuri de 13 carti consecutive. Mai apoi, formam o matrice de frecventa a tipurilor de carti jucate. Astefl, fiecare jucator are cate o linie cu frecventa cartilor sare de s h c d pe coloane. Jocul se rezuma la iterari circulare prin patrice pana cand la fiecare iteratie un jucator ramane fara carti si primeste suma cartilor de pe masa. La urmatorul pas se trece consecutiv si circular la urmatorul jucator repetandu-se parcurgerea pe linii unul ajunge fara carti din acel tip. Jocul se opreste cand unul din jucatori ramane fara carti.
+
+Scarabei - Prima etapa in joc este pregatirea pachetelor initiale de carti ale celor 4 jucatori prin parcurgerea pachetului initial si inserarea in cate o lista corespunzatoare fiecarui jucator grupuri de 13 carti consecutive. Apoi, contruim jocul ca o lista dublu inlantuita circulara in care fiecare nod (jucator) retine lista inlantuita de carti anterior aflata si indicele sau in joc. Se pune prima carte pe o tabla de joc (o lista inlantuita) si dupa incep interatiile prin joc. Se verifica tpul cartii de pe tabla. Daca cartea de pe tabla e scarabel se trece la urm jucator si se contorizeaza nr de 8-uri puse pe tabla si se retine ca a fost mana de scarabel. Daca pe tabla este 8 si nu a fost mana de scarabel se schimba directia si se face un pas in fata. Daca pe tabla este carte cu nr si a fost mana de scarabel se revine la pozitia ultimului scarabel si se muta cartile de pe tabla la sfarsitul pachetului jucatorului cu scarabel. In caz contrar se face un pas in fata. Jocul se termina cand 3 dintre jucatori raman fara carti.
+
+
+
+
+
